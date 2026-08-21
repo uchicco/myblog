@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://uchicco.github.io/myblog/'
 languageCode = 'ja-jp'
-title = 'My Blog'
+title = 'ぱぱんぷいぷい'
 theme = 'hugo-bearblog'
