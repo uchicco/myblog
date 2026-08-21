@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h1>記事一覧</h1>
+
+{{ range where .Site.RegularPages "Section" "blog" }}
+<article>
+  <h2>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h2>
+
+  <p>{{ .Date.Format "2006年1月2日" }}</p>
+
+  <p>{{ .Summary }}</p>
+</article>
+{{ end }}
+
+{{ end }}
