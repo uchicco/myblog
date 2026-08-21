@@ -1,10 +1,14 @@
-body {
-    background: #f5f5f5;
+@font-face {
+    font-family: "WapuroMincho";
+    src: url("/fonts/wapuro-mincho.woff2") format("woff2");
 }
 
-h1 {
-    color: #444;
+body {
+    font-family: "WapuroMincho", serif;
+    background: #f5f5f5;
+     color: #0000ff;
 }
+
 
 a {
     color: #0066cc;
