@@ -1,0 +1,5 @@
+<nav class="tag-nav">
+    {{ range site.Taxonomies.tags }}
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+    {{ end }}
+</nav>

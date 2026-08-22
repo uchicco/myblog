@@ -1,60 +1,107 @@
-@font-face {
-    font-family: "NotoSansJP";
-    src: url("/myblog/fonts/NotoSansJP-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-}
+/* ========================================
+   PAPAN PUIPUI
+   ======================================== */
 
-@font-face {
-    font-family: "ButterHouse";
-    src: url("/myblog/fonts/Butter House.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* 基本フォント */
+/* サイト全体 */
 html,
-body,
-body * {
-    font-family: "NotoSansJP", sans-serif !important;
-}
-
-/* サイトタイトル */
-.site-title {
-    font-family: "ButterHouse", serif !important;
-}
-
-/* 背景 */
 body {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #fcf8c9;
-}
-
-/* 記事部分 */
-article {
-    border: 20px solid #3C3133;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 -20px;
+    background: #F5F5F5 !important;
 }
 
 
-a {
-    color: inherit;
+/* ========================================
+   PaperMod 一覧ページ
+   トップ / 記事一覧 / タグ一覧
+   ======================================== */
+
+.list {
+    background: #F5F5F5 !important;
+}
+
+.list .main {
+    background: #F5F5F5 !important;
+}
+
+
+/* ========================================
+   記事カード
+   ======================================== */
+
+.post-entry,
+.first-entry {
+    background: #FFFFFF !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin: 14px 0 !important;
+}
+
+
+/* ========================================
+   タグ一覧のカード
+   ======================================== */
+
+.tag-entry {
+    background: #FFFFFF !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+}
+
+
+/* ========================================
+   個別記事
+   ======================================== */
+
+.post-single {
+    background: #FFFFFF !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+}
+
+
+/* ========================================
+   タグナビゲーション
+   ======================================== */
+
+.tag-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 20px 16px;
+}
+
+.tag-nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0 14px;
+}
+
+.tag-nav a:not(:last-child)::after {
+    content: "｜";
+    margin-left: 28px;
+    color: #000000;
+}
+
+.tag-nav a:hover {
     text-decoration: underline;
 }
 
-.tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.first-entry {
+    background: #FFFFFF !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin: 14px 0 !important;
+    box-shadow: none !important;
 }
 
-.tag-list a {
-    text-decoration: none;
+/* トップページの記事 */
+.main > article {
+    background: #FFFFFF !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin: 14px 0 !important;
 }

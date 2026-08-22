@@ -1,7 +1,47 @@
 baseURL = 'https://uchicco.github.io/myblog/'
 languageCode = 'ja-jp'
 title = 'PAPAN PUIPUI'
-theme = 'hugo-bearblog'
+theme = 'PaperMod'
 
 [taxonomies]
-  tag = "tags"
+  tags = 'tags'
+
+[params]
+  env = 'production'
+  description = 'PAPAN PUIPUI'
+  author = 'PAPAN PUIPUI'
+
+  defaultTheme = 'light'
+  disableThemeToggle = true
+
+  mainSections = ['blog']
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = false
+
+[menu]
+
+  [[menu.main]]
+    name = '記事'
+    url = '/blog/'
+    weight = 10
+
+  [[menu.main]]
+    name = 'タグ'
+    url = '/tags/'
+    weight = 20
+
+  [[menu.main]]
+    name = '検索'
+    url = '/search/'
+    weight = 30
+
+[pagination]
+  pagerSize = 5
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']

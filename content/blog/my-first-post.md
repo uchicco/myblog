@@ -1,8 +1,8 @@
-+++
-title = "My First Post"
-date = "2026-08-21T16:46:36+09:00"
-tags = ["テスト"]
+﻿+++
+title = "はじめての記事"
+date = "2026-08-22T14:00:00+09:00"
+draft = false
+tags = ["映画", "旅行", "ゲーム", "読書"]
 +++
 
-This is a page about »My First Post«.
-テスト！
+PAPAN PUIPUIの最初の記事です。
