@@ -30,3 +30,8 @@ a {
         background-image: url("/myblog/images/background2.webp");
     }
 }
+
+article {
+    background-color: #fffdf5;
+    padding: 20px;
+}
