@@ -2,3 +2,6 @@ baseURL = 'https://uchicco.github.io/myblog/'
 languageCode = 'ja-jp'
 title = 'PAPAN PUIPUI'
 theme = 'hugo-bearblog'
+
+[taxonomies]
+  tag = "tags"
