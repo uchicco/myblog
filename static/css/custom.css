@@ -12,7 +12,7 @@ body * {
 }
 
 body {
-    background-image: url("/images/background.webp");
+    background-image: url("/myblog/images/background.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
