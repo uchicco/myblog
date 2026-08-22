@@ -12,7 +12,11 @@ body * {
 }
 
 body {
-    background: #FFFFFF;
+    background-image: url("/images/background.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #0000ff;
 }
 
