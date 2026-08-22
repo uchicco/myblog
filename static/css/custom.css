@@ -1,39 +1,52 @@
 @font-face {
-    font-family: "WapuroMincho";
-    src: url("/myblog/fonts/wapuro-mincho.woff2") format("woff2");
+    font-family: "NotoSansJP";
+    src: url("/myblog/fonts/NotoSansJP-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ButterHouse";
+    src: url("/myblog/fonts/Butter House.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
+/* 基本フォント */
 html,
 body,
 body * {
-    font-family: "WapuroMincho", serif !important;
+    font-family: "NotoSansJP", sans-serif !important;
 }
 
+/* サイトタイトル */
+.site-title {
+    font-family: "ButterHouse", serif !important;
+}
+
+/* 背景 */
 body {
-    background-image: url("/myblog/images/background.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    background-color: transparent !important;
-    color: #0000ff;
-}
-
-a {
-    color: #0066cc;
-}
-
-/* スマホ・タブレット */
-@media (max-width: 1024px) {
-    body {
-        background-image: url("/myblog/images/background2.webp");
-    }
+    background-color: #fcf8c9;
 }
 
 /* 記事部分 */
 article {
-    background-color: #fffdf5 !important;
-    padding: 20px;
+    border: 20px solid #3C3133;
+    border-radius: 20px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tag-list a {
+    text-decoration: none;
 }
