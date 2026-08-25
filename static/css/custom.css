@@ -121,15 +121,15 @@ body {
 }
 
 @font-face {
-    font-family: "Clutchee";
-    src: url("/myblog/fonts/clutchee.woff2") format("woff2");
+    font-family: "Zighead";
+    src: url("/myblog/fonts/Zighead.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 .logo,
 .logo a {
-    font-family: "Clutchee", sans-serif !important;
+    font-family: "Zighead", sans-serif !important;
     color: #C9171E !important;
-    font-size: 40px !important;
+    font-size: 48px !important;
 }
