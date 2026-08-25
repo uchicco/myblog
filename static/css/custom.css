@@ -105,3 +105,24 @@ body {
     padding: 24px !important;
     margin: 14px 0 !important;
 }
+
+/* ========================================
+   HPタイトル用フォント
+   ======================================== */
+
+/* ========================================
+   HPタイトル用フォント・色
+   ======================================== */
+
+@font-face {
+    font-family: "Clutchee";
+    src: url("/myblog/fonts/clutchee.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo,
+.logo a {
+    font-family: "Clutchee", sans-serif !important;
+    color: #C9171E !important;
+}
