@@ -2,123 +2,10 @@
    PAPAN PUIPUI
    ======================================== */
 
-/* サイト全体 */
-html,
-body {
-    background: #F5F5F5 !important;
-}
-
 
 /* ========================================
-   PaperMod 一覧ページ
-   トップ / 記事一覧 / タグ一覧
+   フォント
    ======================================== */
-
-.list {
-    background: #F5F5F5 !important;
-}
-
-.list .main {
-    background: #F5F5F5 !important;
-}
-
-
-/* ========================================
-   記事カード
-   ======================================== */
-
-.post-entry,
-.first-entry {
-    background: #FFFFFF !important;
-    border: 1px solid #DDDDDD !important;
-    border-radius: 12px !important;
-    padding: 24px !important;
-    margin: 14px 0 !important;
-}
-
-
-/* ========================================
-   タグ一覧のカード
-   ======================================== */
-
-.tag-entry {
-    background: #FFFFFF !important;
-    border: 1px solid #DDDDDD !important;
-    border-radius: 12px !important;
-}
-
-
-/* ========================================
-   個別記事
-   ======================================== */
-
-.post-single {
-    background: #FFFFFF !important;
-    border: 1px solid #DDDDDD !important;
-    border-radius: 12px !important;
-    padding: 24px !important;
-}
-
-
-/* ========================================
-   タグナビゲーション
-   ======================================== */
-
-.tag-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 8px 20px 16px;
-}
-
-.tag-nav a {
-    color: #000000;
-    text-decoration: none;
-    padding: 0 14px;
-}
-
-.tag-nav a:not(:last-child)::after {
-    content: "｜";
-    margin-left: 28px;
-    color: #000000;
-}
-
-.tag-nav a:hover {
-    text-decoration: underline;
-}
-
-.first-entry {
-    background: #FFFFFF !important;
-    border: 1px solid #DDDDDD !important;
-    border-radius: 12px !important;
-    padding: 24px !important;
-    margin: 14px 0 !important;
-    box-shadow: none !important;
-}
-
-/* トップページの記事 */
-.main > article {
-    background: #FFFFFF !important;
-    border: 1px solid #DDDDDD !important;
-    border-radius: 12px !important;
-    padding: 24px !important;
-    margin: 14px 0 !important;
-}
-
-/* ========================================
-   HPタイトル用フォント
-   ======================================== */
-
-/* ========================================
-   HPタイトル用フォント・色
-   ======================================== */
-@font-face {
-    font-family: "Clutchee";
-    src: url("/myblog/fonts/clutchee.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: "Zighead";
@@ -127,9 +14,1214 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Mincho";
+    src: url("/myblog/fonts/wapuro-mincho.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ========================================
+   基本設定
+   ======================================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #EEEEEA !important;
+    color: #111111;
+
+    font-family: "Mincho";
+}
+
+
+/* PaperMod標準幅解除 */
+
+.header,
+.main,
+.footer,
+.nav {
+    max-width: none !important;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   ロゴ共通
+   ======================================== */
+
 .logo,
 .logo a {
     font-family: "Zighead", sans-serif !important;
-    color: #C9171E !important;
-    font-size: 48px !important;
+    color: #EF2223 !important;
+
+    font-weight: normal !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    text-decoration: none !important;
 }
+
+
+/* ========================================
+   タグ背景
+   
+
+/* ========================================
+   ヘッダー全体
+   ロゴ・右上メニュー・カテゴリを同じ横幅に揃える
+   ======================================== */
+
+.header {
+    width: 88%;
+    max-width: 1400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-top: 18px;
+    padding-bottom: 0;
+}
+
+
+/* ========================================
+   上段
+   ロゴ左・メニュー右
+   ======================================== */
+
+header .nav {
+    width: 100%;
+    max-width: none !important;
+
+    display: flex;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+}
+
+
+/* ロゴを左端に揃える */
+
+.logo,
+.logo a {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "Zighead", sans-serif !important;
+    font-size: 48px;
+    line-height: 1;
+
+    color: #EF2223 !important;
+    text-decoration: none !important;
+}
+
+
+/* 右上メニュー */
+
+header #menu {
+    margin-left: auto !important;
+    padding-top: 8px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+/* ========================================
+   カテゴリ
+   ロゴ直下に横並び
+   ======================================== */
+
+.tag-nav {
+    width: 88%;
+    max-width: 1400px;
+
+    margin: 28px auto 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 34px;
+
+    box-sizing: border-box;
+
+    font-family: "Mincho";
+    font-weight: bold;
+}
+
+
+/* カテゴリリンク */
+
+.tag-nav a {
+    display: inline-block;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #EF2223;
+    text-decoration: none;
+}
+
+
+/* 区切り文字は無し */
+
+.tag-nav a:not(:last-child)::after {
+    content: none;
+}
+
+
+.tag-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   MAIN
+   カテゴリとの空白を少し縮める
+   ======================================== */
+
+.main {
+    padding-top: 70px;
+}
+
+
+
+
+
+
+
+/* ========================================
+   記事一覧
+   ======================================== */
+
+.post-entry,
+.first-entry,
+.main > article {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 30px 0 !important;
+
+    box-sizing: border-box;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-bottom: 1px solid #EF2223 !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    font-family: "Mincho";
+}
+
+
+/* ========================================
+   記事一覧タイトル
+   ======================================== */
+
+.post-entry .entry-header,
+.first-entry .entry-header {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.post-entry .entry-header h2,
+.first-entry .entry-header h1,
+.first-entry .entry-header h2 {
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+
+    font-family: "Mincho";
+
+    font-size: 36px;
+    font-weight: normal;
+
+    line-height: 1.15;
+}
+
+.post-entry .entry-header h2 a,
+.first-entry .entry-header h1 a,
+.first-entry .entry-header h2 a {
+    color: #111111 !important;
+    text-decoration: none;
+}
+
+.post-entry .entry-header h2 a:hover,
+.first-entry .entry-header h1 a:hover,
+.first-entry .entry-header h2 a:hover {
+    color: #EF2223 !important;
+}
+
+
+/* ========================================
+   記事プレビュー
+   ======================================== */
+
+.entry-content {
+    max-width: 760px;
+
+    margin: 15px 0 0 !important;
+    padding: 0 !important;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   メタ情報
+   ======================================== */
+
+.entry-footer,
+.post-meta {
+    margin-top: 15px !important;
+
+    color: #EF2223 !important;
+
+    font-family: "Mincho";
+    font-size: 13px;
+}
+
+
+/* ========================================
+   個別記事
+   ======================================== */
+
+.post-single {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 30px 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    font-family: "Mincho";
+}
+
+.post-header {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* ========================================
+   個別記事本文
+   ======================================== */
+
+.post-content {
+    max-width: 850px;
+
+    margin: 35px 0 0 !important;
+    padding: 0 !important;
+
+    font-family: "Mincho";
+
+    font-size: 17px;
+    line-height: 2;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    font-family: "Mincho";
+}
+
+.post-content h2 {
+    margin-top: 60px;
+
+    color: #EF2223;
+
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.post-content a {
+    color: #EF2223 !important;
+    text-decoration: underline;
+}
+
+.post-content img {
+    max-width: 100%;
+
+    margin: 30px 0;
+
+    border-radius: 0 !important;
+}
+
+
+/* ========================================
+   タグ一覧
+   ======================================== */
+
+.tag-entry {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 22px 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-bottom: 1px solid #EF2223 !important;
+
+    border-radius: 0 !important;
+}
+
+
+/* ========================================
+   フッター
+   ======================================== */
+
+.footer {
+    margin-top: 60px !important;
+
+    padding-top: 20px !important;
+    padding-bottom: 30px !important;
+
+    color: #EF2223;
+}
+
+
+
+
+
+/* ==================================================
+   PC
+   1001px以上
+   ================================================== */
+
+@media screen and (min-width: 1001px) {
+
+    /* ----------------------------------------
+       ヘッダー
+       ---------------------------------------- */
+
+    .header {
+        position: relative;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 28px 32px 30px !important;
+
+        background: #EEEEEA !important;
+    }
+
+    .header .nav,
+    header .nav {
+        position: relative !important;
+
+        width: 100% !important;
+        min-height: 65px;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+    }
+
+
+    /* ----------------------------------------
+       ロゴ
+       ---------------------------------------- */
+
+    .header .nav .logo,
+    .logo {
+        position: absolute !important;
+
+        left: 20px !important;
+        top: 18px !important;
+
+        transform: none !important;
+    }
+
+    .header .nav .logo a,
+    .logo a {
+        display: block !important;
+
+        font-size: 48px !important;
+        line-height: 1 !important;
+    }
+
+
+    /* ----------------------------------------
+       左カラム
+       ゲーム・旅行・映画・読書
+       ---------------------------------------- */
+
+    .tag-nav {
+        position: fixed !important;
+
+        left: 40px !important;
+        top: 100px !important;
+
+        width: 160px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+
+        gap: 12px !important;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        z-index: 100;
+
+        text-align: left !important;
+    }
+
+    .tag-nav a {
+        display: block !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #EF2223 !important;
+
+        font-family: "Mincho";
+        font-size: 20px !important;
+        font-weight: bold;
+
+        line-height: 1.35;
+
+        text-decoration: none;
+    }
+
+    .tag-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .tag-nav a:not(:last-child)::after {
+        content: none !important;
+    }
+
+
+    /* ----------------------------------------
+       記事・タグ・検索
+       読書との間を大きく空ける
+       ---------------------------------------- */
+
+    #menu,
+    header #menu,
+    .header .nav #menu {
+        position: fixed !important;
+
+        left: 40px !important;
+        top: 310px !important;
+
+        width: 160px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+
+        gap: 15px !important;
+
+        z-index: 100;
+    }
+
+    #menu li,
+    header #menu li,
+    .header .nav #menu li {
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #menu a,
+    header #menu a,
+    .header .nav #menu a {
+        display: block !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #EF2223 !important;
+
+        font-family: "Mincho";
+        font-size: 20px !important;
+        font-weight: bold;
+
+        line-height: 1.35;
+
+        text-decoration: none;
+    }
+
+    #menu a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* ----------------------------------------
+       メイン記事領域
+       左右同程度の空白
+       ---------------------------------------- */
+
+    .main {
+        position: relative !important;
+
+        width: auto !important;
+
+        margin-left: 210px !important;
+        margin-right: 210px !important;
+
+        padding: 0 0 0 30px !important;
+
+        border-left: none !important;
+    }
+
+
+    /* ----------------------------------------
+       左カラムと本文の赤線
+       ロゴより下から開始
+       ---------------------------------------- */
+
+    .main::before {
+        content: "";
+
+        position: fixed;
+
+        left: 210px;
+        top: 110px;
+        bottom: 0;
+
+        width: 1px;
+
+        background: #EF2223;
+
+        pointer-events: none;
+    }
+
+
+    /* ----------------------------------------
+       PC H1
+       ---------------------------------------- */
+
+    h1,
+    .post-title,
+    .post-single .post-title,
+    .page-header h1 {
+        font-size: 40px !important;
+        line-height: 1.15 !important;
+    }
+
+
+    /* ----------------------------------------
+       フッター
+       ---------------------------------------- */
+
+    .footer {
+        width: auto !important;
+
+        margin-left: 210px !important;
+        margin-right: 210px !important;
+
+        padding-left: 30px !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+/* ==================================================
+   タブレット
+   601px〜1000px
+   ================================================== */
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+
+    /* ----------------------------------------
+       固定ヘッダー
+       ---------------------------------------- */
+
+    .header {
+        position: sticky !important;
+
+        top: 0 !important;
+        z-index: 9999 !important;
+
+        width: 100% !important;
+        height: 108px !important;
+
+        margin: 0 !important;
+        padding: 10px 18px !important;
+
+        background: #EEEEEA !important;
+
+        border-bottom: 1px solid #EF2223 !important;
+
+        box-sizing: border-box;
+    }
+
+    .header .nav,
+    header .nav {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+    }
+
+
+    /* ----------------------------------------
+       ロゴ
+       ---------------------------------------- */
+
+    .header .nav .logo,
+    .logo {
+        position: absolute !important;
+
+        left: 0 !important;
+        top: 0 !important;
+
+        transform: none !important;
+    }
+
+    .header .nav .logo a,
+    .logo a {
+        display: block !important;
+
+        font-size: 40px !important;
+        line-height: 1 !important;
+    }
+
+
+    /* ----------------------------------------
+       カテゴリ
+       左側
+       ---------------------------------------- */
+
+    .tag-nav {
+        position: fixed !important;
+
+        left: 18px !important;
+        top: 72px !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        align-items: center !important;
+
+        gap: 13px !important;
+
+        white-space: nowrap;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        z-index: 10000;
+    }
+
+    .tag-nav a {
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #EF2223 !important;
+
+        font-size: 18px !important;
+        font-weight: bold;
+
+        line-height: 1 !important;
+    }
+
+
+    /* ----------------------------------------
+       記事・タグ・検索
+       カテゴリと同じ1行
+       ---------------------------------------- */
+
+    #menu,
+    header #menu,
+    .header .nav #menu {
+        position: fixed !important;
+
+        top: 72px !important;
+        right: 18px !important;
+        left: auto !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+      
+
+        align-items: center !important;
+
+        gap: 13px !important;
+
+        z-index: 10000;
+    }
+
+    #menu li,
+    header #menu li {
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #menu a,
+    header #menu a,
+    .header .nav #menu a {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #EF2223 !important;
+
+        font-size: 18px !important;
+        font-weight: bold;
+
+        line-height: 1 !important;
+
+        white-space: nowrap;
+    }
+
+
+    /* ----------------------------------------
+       メイン
+       ---------------------------------------- */
+
+    .main {
+        width: 94% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding: 20px 0 0 !important;
+
+        border-left: none !important;
+    }
+
+    .main::before {
+        display: none !important;
+        content: none !important;
+    }
+
+
+    /* ----------------------------------------
+       H1
+       ---------------------------------------- */
+
+    h1,
+    .post-title,
+    .post-single .post-title,
+    .page-header h1 {
+        font-size: 25px !important;
+        line-height: 1.2 !important;
+    }
+
+
+    .post-entry .entry-header h2,
+    .first-entry .entry-header h1,
+    .first-entry .entry-header h2 {
+        font-size: 28px !important;
+    }
+
+
+    .footer {
+        width: 94% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/* ==================================================
+   スマホ
+   600px以下
+   ================================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* ----------------------------------------
+       固定ヘッダー
+       ---------------------------------------- */
+
+    .header {
+        position: sticky !important;
+
+        top: 0 !important;
+        z-index: 9999 !important;
+
+        width: 100% !important;
+        height: 96px !important;
+
+        margin: 0 !important;
+        padding: 9px 8px !important;
+
+        background: #EEEEEA !important;
+
+        border-bottom: 1px solid #EF2223 !important;
+
+        box-sizing: border-box;
+    }
+
+    .header .nav,
+    header .nav {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+    }
+
+
+    /* ----------------------------------------
+       ロゴ
+       ---------------------------------------- */
+
+    .header .nav .logo,
+    .logo {
+        position: absolute !important;
+
+        left: 5 !important;
+        top: 10 !important;
+
+        transform: none !important;
+    }
+
+    .header .nav .logo a,
+    .logo a {
+        display: block !important;
+
+        font-size: 34px !important;
+        line-height: 1 !important;
+    }
+
+
+    /* ----------------------------------------
+       カテゴリ
+       ---------------------------------------- */
+
+    .tag-nav {
+        position: fixed !important;
+
+        left: 25px !important;
+        top: 65px !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        align-items: center !important;
+
+        gap: 7px !important;
+
+        white-space: nowrap;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        z-index: 10000;
+    }
+
+    .tag-nav a {
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #EF2223 !important;
+
+        font-size: 16px !important;
+        font-weight: bold;
+
+        line-height: 1 !important;
+    }
+
+
+    /* ----------------------------------------
+       記事・タグ・検索
+       同じ1行
+       ---------------------------------------- */
+
+    #menu,
+    header #menu,
+    .header .nav #menu {
+        position: fixed !important;
+
+        top: 65px !important;
+        right: 15px !important;
+        left: auto !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        align-items: center !important;
+
+        gap: 7px !important;
+
+        z-index: 10000;
+    }
+
+    #menu li,
+    header #menu li {
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #menu a,
+    header #menu a,
+    .header .nav #menu a {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #EF2223 !important;
+
+        font-size: 16px !important;
+        font-weight: bold;
+
+        line-height: 1 !important;
+
+        white-space: nowrap;
+    }
+
+
+    /* ----------------------------------------
+       メイン
+       ---------------------------------------- */
+
+    .main {
+        width: 92% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding: 16px 0 0 !important;
+
+        border-left: none !important;
+    }
+
+    .main::before {
+        display: none !important;
+        content: none !important;
+    }
+
+
+    /* ----------------------------------------
+       H1
+       さらに小さく
+       ---------------------------------------- */
+
+    h1,
+    .post-title,
+    .post-single .post-title,
+    .page-header h1 {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+    }
+
+
+    /* 記事一覧タイトル */
+
+    .post-entry .entry-header h2,
+    .first-entry .entry-header h1,
+    .first-entry .entry-header h2 {
+        font-size: 25px !important;
+    }
+
+
+    .entry-content {
+        font-size: 14px;
+    }
+
+
+    .post-content {
+        margin-top: 25px !important;
+
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+
+    .footer {
+        width: 92% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+/* ========================================
+   タブレット・スマホ
+   フッター下線を画面幅100%
+   ======================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .footer {
+        position: relative;
+        border-bottom: none !important;
+    }
+
+    .footer::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 0;
+
+        width: 100vw;
+        height: 1px;
+
+        background: #EF2223;
+
+        transform: translateX(-50%);
+    }
+
+.terms-tags li {
+    background: #FFFFFF !important;
+    border: 1px solid #EF2223 !important;
+    border-radius: 8px !important;
+}
+
+.terms-tags li a {
+    background: transparent !important;
+}
+
+body .terms-tags a,
+body .terms-tags li a,
+body ul.terms-tags li a {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+
+    box-shadow: none !important;
+
+    border: 1px solid #FFFFFF !important;
+}
+
+
+}
+
+/* ========================================
+   タブレット・スマホ
+   記事下の赤線を画面幅100%
+   ======================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .post-entry,
+    .first-entry,
+    .main > article {
+        position: relative;
+
+        border-bottom: none !important;
+    }
+
+    .post-entry::after,
+    .first-entry::after,
+    .main > article::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 0;
+
+        width: 100vw;
+        height: 1px;
+
+        background: #EF2223;
+
+        transform: translateX(-50%);
+    }
+}
+
+
+/* ========================================
+   タグ一覧
+   背景を白
+   ======================================== */
+.terms-tags li {
+    background: #FFFFFF !important;
+    border: 1px solid #EF2223 !important;
+    border-radius: 8px !important;
+}
+
+.terms-tags li a {
+    background: transparent !important;
+}
+
+body .terms-tags a,
+body .terms-tags li a,
+body ul.terms-tags li a {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+
+    box-shadow: none !important;
+
+    border: 1px solid #FFFFFF !important;
+}
+
+
+
+}
+
