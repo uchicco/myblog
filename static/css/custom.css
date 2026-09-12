@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Mincho";
-    src: url("/myblog/fonts/ZenOldMincho-Medium.woff") format("woff2");
+    src: url("/myblog/fonts/ZenOldMincho-Medium.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -31,10 +31,16 @@ body {
     margin: 0;
     padding: 0;
 
+    width: 100%;
+    max-width: 100%;
+
     background: #EEEEEA !important;
     color: #333333;
 
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
+
+    /* 横スクロール防止 */
+    overflow-x: clip;
 }
 
 
@@ -56,6 +62,7 @@ body {
 .logo,
 .logo a {
     font-family: "Zighead", sans-serif !important;
+
     color: #333333 !important;
 
     font-weight: normal !important;
@@ -72,19 +79,16 @@ body {
 
 
 /* ========================================
-   タグ背景
-   
-
-/* ========================================
-   ヘッダー全体
-   ロゴ・右上メニュー・カテゴリを同じ横幅に揃える
+   ヘッダー基本
    ======================================== */
 
 .header {
     width: 88%;
     max-width: 1400px !important;
+
     margin-left: auto !important;
     margin-right: auto !important;
+
     padding-top: 18px;
     padding-bottom: 0;
 }
@@ -106,7 +110,9 @@ header .nav {
 }
 
 
-/* ロゴを左端に揃える */
+/* ========================================
+   ロゴ
+   ======================================== */
 
 .logo,
 .logo a {
@@ -114,15 +120,20 @@ header .nav {
     padding: 0 !important;
 
     font-family: "Zighead", sans-serif !important;
+
     font-size: 48px;
     line-height: 1;
 
     color: #333333 !important;
+
     text-decoration: none !important;
 }
 
 
-/* 右上メニュー */
+/* ========================================
+   PaperMod 上部メニュー
+   記事・タグ・検索
+   ======================================== */
 
 header #menu {
     margin-left: auto !important;
@@ -132,12 +143,26 @@ header #menu {
     align-items: center;
 
     gap: 28px;
+
+    /* PaperMod標準の横スクロールを無効化 */
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+
+    scrollbar-width: none !important;
+
+    white-space: nowrap;
+}
+
+header #menu::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 
 /* ========================================
    カテゴリ
-   ロゴ直下に横並び
    ======================================== */
 
 .tag-nav {
@@ -148,17 +173,19 @@ header #menu {
     padding: 0;
 
     display: flex;
+
     flex-direction: row;
+
     justify-content: flex-start;
     align-items: center;
+
     flex-wrap: wrap;
 
     gap: 34px;
 
     box-sizing: border-box;
 
-    font-family: "Mincho";
-    
+    font-family: "Mincho", serif;
 }
 
 
@@ -171,11 +198,12 @@ header #menu {
     padding: 0 !important;
 
     color: #333333;
+
     text-decoration: none;
 }
 
 
-/* 区切り文字は無し */
+/* 区切り文字なし */
 
 .tag-nav a:not(:last-child)::after {
     content: none;
@@ -189,17 +217,11 @@ header #menu {
 
 /* ========================================
    MAIN
-   カテゴリとの空白を少し縮める
    ======================================== */
 
 .main {
     padding-top: 70px;
 }
-
-
-
-
-
 
 
 /* ========================================
@@ -225,7 +247,7 @@ header #menu {
 
     box-shadow: none !important;
 
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
 }
 
 
@@ -239,13 +261,14 @@ header #menu {
     padding: 0 !important;
 }
 
+
 .post-entry .entry-header h2,
 .first-entry .entry-header h1,
 .first-entry .entry-header h2 {
     margin: 0 0 12px !important;
     padding: 0 !important;
 
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
 
     font-size: 36px;
     font-weight: normal;
@@ -253,12 +276,15 @@ header #menu {
     line-height: 1.15;
 }
 
+
 .post-entry .entry-header h2 a,
 .first-entry .entry-header h1 a,
 .first-entry .entry-header h2 a {
     color: #111111 !important;
+
     text-decoration: none;
 }
+
 
 .post-entry .entry-header h2 a:hover,
 .first-entry .entry-header h1 a:hover,
@@ -292,7 +318,8 @@ header #menu {
 
     color: #333333 !important;
 
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
+
     font-size: 13px;
 }
 
@@ -313,8 +340,9 @@ header #menu {
     border: none !important;
     border-radius: 0 !important;
 
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
 }
+
 
 .post-header {
     margin: 0 !important;
@@ -332,17 +360,19 @@ header #menu {
     margin: 35px 0 0 !important;
     padding: 0 !important;
 
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
 
     font-size: 17px;
     line-height: 2;
 }
 
+
 .post-content h1,
 .post-content h2,
 .post-content h3 {
-    font-family: "Mincho";
+    font-family: "Mincho", serif;
 }
+
 
 .post-content h2 {
     margin-top: 60px;
@@ -353,10 +383,13 @@ header #menu {
     font-weight: normal;
 }
 
+
 .post-content a {
     color: #333333 !important;
+
     text-decoration: underline;
 }
+
 
 .post-content img {
     max-width: 100%;
@@ -386,21 +419,53 @@ header #menu {
 }
 
 
+/* タグカード */
+
+.terms-tags li {
+    background: #EEEEEA !important;
+
+    border: 1px solid #333333 !important;
+    border-radius: 8px !important;
+}
+
+
+.terms-tags li a {
+    background: transparent !important;
+}
+
+
+body .terms-tags a,
+body .terms-tags li a,
+body ul.terms-tags li a {
+    background: #EEEEEA !important;
+    background-color: #EEEEEA !important;
+
+    box-shadow: none !important;
+
+    border: 1px solid #EEEEEA !important;
+}
+
+
 /* ========================================
-   フッター
+   フッター基本
    ======================================== */
 
 .footer {
+    width: 100% !important;
+    max-width: none !important;
+
     margin-top: 60px !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 
     padding-top: 20px !important;
     padding-bottom: 30px !important;
 
+    box-sizing: border-box;
+
     color: #333333;
 }
-
-
-
 
 
 /* ==================================================
@@ -410,9 +475,10 @@ header #menu {
 
 @media screen and (min-width: 1001px) {
 
-    /* ----------------------------------------
+
+    /* ========================================
        ヘッダー
-       ---------------------------------------- */
+       ======================================== */
 
     .header {
         position: relative;
@@ -420,10 +486,12 @@ header #menu {
         width: 100% !important;
 
         margin: 0 !important;
+
         padding: 28px 32px 30px !important;
 
         background: #EEEEEA !important;
     }
+
 
     .header .nav,
     header .nav {
@@ -439,9 +507,9 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        ロゴ
-       ---------------------------------------- */
+       ======================================== */
 
     .header .nav .logo,
     .logo {
@@ -453,6 +521,7 @@ header #menu {
         transform: none !important;
     }
 
+
     .header .nav .logo a,
     .logo a {
         display: block !important;
@@ -462,10 +531,10 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        左カラム
        ゲーム・旅行・映画・読書
-       ---------------------------------------- */
+       ======================================== */
 
     .tag-nav {
         position: fixed !important;
@@ -479,6 +548,7 @@ header #menu {
         padding: 0 !important;
 
         display: flex !important;
+
         flex-direction: column !important;
 
         justify-content: flex-start !important;
@@ -495,6 +565,7 @@ header #menu {
         text-align: left !important;
     }
 
+
     .tag-nav a {
         display: block !important;
 
@@ -505,7 +576,8 @@ header #menu {
 
         color: #333333 !important;
 
-        font-family: "Mincho";
+        font-family: "Mincho", serif;
+
         font-size: 20px !important;
 
         line-height: 1.35;
@@ -513,19 +585,20 @@ header #menu {
         text-decoration: none;
     }
 
+
     .tag-nav a:hover {
         text-decoration: underline;
     }
+
 
     .tag-nav a:not(:last-child)::after {
         content: none !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        記事・タグ・検索
-       読書との間を大きく空ける
-       ---------------------------------------- */
+       ======================================== */
 
     #menu,
     header #menu,
@@ -541,6 +614,7 @@ header #menu {
         padding: 0 !important;
 
         display: flex !important;
+
         flex-direction: column !important;
 
         justify-content: flex-start !important;
@@ -548,14 +622,27 @@ header #menu {
 
         gap: 15px !important;
 
-        overflow: visible !important;
-        overflow-x: visible !important;
-        overflow-y: visible !important;
-        white-space: normal !important;
+        overflow: hidden !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
 
+        scrollbar-width: none !important;
+
+        white-space: normal !important;
 
         z-index: 100;
     }
+
+
+    #menu::-webkit-scrollbar,
+    header #menu::-webkit-scrollbar,
+    .header .nav #menu::-webkit-scrollbar {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+    }
+
 
     #menu li,
     header #menu li,
@@ -565,6 +652,7 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
     }
+
 
     #menu a,
     header #menu a,
@@ -576,7 +664,8 @@ header #menu {
 
         color: #333333 !important;
 
-        font-family: "Mincho";
+        font-family: "Mincho", serif;
+
         font-size: 20px !important;
 
         line-height: 1.35;
@@ -584,15 +673,15 @@ header #menu {
         text-decoration: none;
     }
 
+
     #menu a:hover {
         text-decoration: underline;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        メイン記事領域
-       左右同程度の空白
-       ---------------------------------------- */
+       ======================================== */
 
     .main {
         position: relative !important;
@@ -608,10 +697,9 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
-       左カラムと本文の赤線
-       ロゴより下から開始
-       ---------------------------------------- */
+    /* ========================================
+       左カラムと本文の縦線
+       ======================================== */
 
     .main::before {
         content: "";
@@ -630,22 +718,23 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        PC H1
-       ---------------------------------------- */
+       ======================================== */
 
     h1,
     .post-title,
     .post-single .post-title,
     .page-header h1 {
         font-size: 40px !important;
+
         line-height: 1.15 !important;
     }
 
 
-    /* ----------------------------------------
-       フッター
-       ---------------------------------------- */
+    /* ========================================
+       PCフッター
+       ======================================== */
 
     .footer {
         width: auto !important;
@@ -666,20 +755,23 @@ header #menu {
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
 
-    /* ----------------------------------------
+
+    /* ========================================
        固定ヘッダー
-       ---------------------------------------- */
+       ======================================== */
 
     .header {
         position: sticky !important;
 
         top: 0 !important;
+
         z-index: 9999 !important;
 
         width: 100% !important;
         height: 108px !important;
 
         margin: 0 !important;
+
         padding: 10px 18px !important;
 
         background: #EEEEEA !important;
@@ -688,6 +780,7 @@ header #menu {
 
         box-sizing: border-box;
     }
+
 
     .header .nav,
     header .nav {
@@ -700,12 +793,14 @@ header #menu {
         padding: 0 !important;
 
         display: block !important;
+
+        overflow: visible !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        ロゴ
-       ---------------------------------------- */
+       ======================================== */
 
     .header .nav .logo,
     .logo {
@@ -717,6 +812,7 @@ header #menu {
         transform: none !important;
     }
 
+
     .header .nav .logo a,
     .logo a {
         display: block !important;
@@ -726,23 +822,24 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        カテゴリ
-       左側
-       ---------------------------------------- */
+       ======================================== */
 
     .tag-nav {
         position: fixed !important;
 
-        left: 18px !important;
+        left: 30px !important;
         top: 72px !important;
 
         width: auto !important;
+        max-width: calc(100% - 250px) !important;
 
         margin: 0 !important;
         padding: 0 !important;
 
         display: flex !important;
+
         flex-direction: row !important;
         flex-wrap: nowrap !important;
 
@@ -750,7 +847,9 @@ header #menu {
 
         gap: 13px !important;
 
-        white-space: nowrap;
+        white-space: nowrap !important;
+
+        overflow: hidden !important;
 
         border: none !important;
 
@@ -759,11 +858,14 @@ header #menu {
         z-index: 10000;
     }
 
+
     .tag-nav a {
         width: auto !important;
 
         margin: 0 !important;
         padding: 0 !important;
+
+        flex: 0 0 auto;
 
         color: #333333 !important;
 
@@ -773,10 +875,9 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        記事・タグ・検索
-       カテゴリと同じ1行
-       ---------------------------------------- */
+       ======================================== */
 
     #menu,
     header #menu,
@@ -788,33 +889,62 @@ header #menu {
         left: auto !important;
 
         width: auto !important;
+        max-width: none !important;
 
         margin: 0 !important;
         padding: 0 !important;
 
         display: flex !important;
+
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-      
 
         align-items: center !important;
 
         gap: 13px !important;
 
+        white-space: nowrap !important;
+
+        /* ここがスクロールバー対策 */
+        overflow: hidden !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+
+        scrollbar-width: none !important;
+
         z-index: 10000;
     }
 
+
+    #menu::-webkit-scrollbar,
+    header #menu::-webkit-scrollbar,
+    .header .nav #menu::-webkit-scrollbar {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+
     #menu li,
-    header #menu li {
+    header #menu li,
+    .header .nav #menu li {
         width: auto !important;
+
+        min-width: 0 !important;
 
         margin: 0 !important;
         padding: 0 !important;
+
+        flex: 0 0 auto !important;
     }
+
 
     #menu a,
     header #menu a,
     .header .nav #menu a {
+        display: block !important;
+
         margin: 0 !important;
         padding: 0 !important;
 
@@ -824,13 +954,13 @@ header #menu {
 
         line-height: 1 !important;
 
-        white-space: nowrap;
+        white-space: nowrap !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        メイン
-       ---------------------------------------- */
+       ======================================== */
 
     .main {
         width: 94% !important;
@@ -843,21 +973,24 @@ header #menu {
         border-left: none !important;
     }
 
+
     .main::before {
         display: none !important;
+
         content: none !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        H1
-       ---------------------------------------- */
+       ======================================== */
 
     h1,
     .post-title,
     .post-single .post-title,
     .page-header h1 {
         font-size: 25px !important;
+
         line-height: 1.2 !important;
     }
 
@@ -869,11 +1002,23 @@ header #menu {
     }
 
 
+    /* ========================================
+       フッター
+       画面幅100%
+       ======================================== */
+
     .footer {
         width: 94% !important;
 
         margin-left: auto !important;
         margin-right: auto !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        border-bottom: 1px solid #333333 !important;
+
+        box-sizing: border-box !important;
     }
 }
 
@@ -885,20 +1030,23 @@ header #menu {
 
 @media screen and (max-width: 600px) {
 
-    /* ----------------------------------------
+
+    /* ========================================
        固定ヘッダー
-       ---------------------------------------- */
+       ======================================== */
 
     .header {
         position: sticky !important;
 
         top: 0 !important;
+
         z-index: 9999 !important;
 
         width: 100% !important;
         height: 96px !important;
 
         margin: 0 !important;
+
         padding: 9px 8px !important;
 
         background: #EEEEEA !important;
@@ -907,6 +1055,7 @@ header #menu {
 
         box-sizing: border-box;
     }
+
 
     .header .nav,
     header .nav {
@@ -919,22 +1068,25 @@ header #menu {
         padding: 0 !important;
 
         display: block !important;
+
+        overflow: visible !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        ロゴ
-       ---------------------------------------- */
+       ======================================== */
 
     .header .nav .logo,
     .logo {
         position: absolute !important;
 
-        left: 5 !important;
-        top: 10 !important;
+        left: 5px !important;
+        top: 10px !important;
 
         transform: none !important;
     }
+
 
     .header .nav .logo a,
     .logo a {
@@ -945,9 +1097,9 @@ header #menu {
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        カテゴリ
-       ---------------------------------------- */
+       ======================================== */
 
     .tag-nav {
         position: fixed !important;
@@ -961,6 +1113,7 @@ header #menu {
         padding: 0 !important;
 
         display: flex !important;
+
         flex-direction: row !important;
         flex-wrap: nowrap !important;
 
@@ -968,7 +1121,9 @@ header #menu {
 
         gap: 7px !important;
 
-        white-space: nowrap;
+        white-space: nowrap !important;
+
+        overflow: hidden !important;
 
         border: none !important;
 
@@ -976,6 +1131,7 @@ header #menu {
 
         z-index: 10000;
     }
+
 
     .tag-nav a {
         width: auto !important;
@@ -988,13 +1144,14 @@ header #menu {
         font-size: 16px !important;
 
         line-height: 1 !important;
+
+        flex: 0 0 auto;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        記事・タグ・検索
-       同じ1行
-       ---------------------------------------- */
+       ======================================== */
 
     #menu,
     header #menu,
@@ -1006,11 +1163,13 @@ header #menu {
         left: auto !important;
 
         width: auto !important;
+        max-width: none !important;
 
         margin: 0 !important;
         padding: 0 !important;
 
         display: flex !important;
+
         flex-direction: row !important;
         flex-wrap: nowrap !important;
 
@@ -1018,37 +1177,63 @@ header #menu {
 
         gap: 7px !important;
 
+        white-space: nowrap !important;
+
+        overflow: hidden !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+
+        scrollbar-width: none !important;
+
         z-index: 10000;
     }
 
+
+    #menu::-webkit-scrollbar,
+    header #menu::-webkit-scrollbar,
+    .header .nav #menu::-webkit-scrollbar {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+
     #menu li,
-    header #menu li {
+    header #menu li,
+    .header .nav #menu li {
         width: auto !important;
+
+        min-width: 0 !important;
 
         margin: 0 !important;
         padding: 0 !important;
+
+        flex: 0 0 auto !important;
     }
+
 
     #menu a,
     header #menu a,
     .header .nav #menu a {
+        display: block !important;
+
         margin: 0 !important;
         padding: 0 !important;
 
         color: #333333 !important;
 
         font-size: 16px !important;
-  
 
         line-height: 1 !important;
 
-        white-space: nowrap;
+        white-space: nowrap !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        メイン
-       ---------------------------------------- */
+       ======================================== */
 
     .main {
         width: 92% !important;
@@ -1061,27 +1246,27 @@ header #menu {
         border-left: none !important;
     }
 
+
     .main::before {
         display: none !important;
+
         content: none !important;
     }
 
 
-    /* ----------------------------------------
+    /* ========================================
        H1
-       さらに小さく
-       ---------------------------------------- */
+       ======================================== */
 
     h1,
     .post-title,
     .post-single .post-title,
     .page-header h1 {
         font-size: 22px !important;
+
         line-height: 1.2 !important;
     }
 
-
-    /* 記事一覧タイトル */
 
     .post-entry .entry-header h2,
     .first-entry .entry-header h1,
@@ -1103,177 +1288,71 @@ header #menu {
     }
 
 
+    /* ========================================
+       フッター
+       ヘッダー・本文と同じ幅
+       ======================================== */
+
     .footer {
         width: 92% !important;
 
         margin-left: auto !important;
         margin-right: auto !important;
-    }
 
-/* ========================================
-   タブレット・スマホ
-   フッター下線を画面幅100%
-   ======================================== */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
-@media screen and (max-width: 1000px) {
+        border-bottom: 1px solid #333333 !important;
 
-    .footer {
-        position: relative;
-        border-bottom: none !important;
-    }
-
-    .footer::after {
-        content: "";
-
-        position: absolute;
-
-        left: 50%;
-        bottom: 0;
-
-        width: 100vw;
-        height: 1px;
-
-        background: #333333;
-
-        transform: translateX(-50%);
-    }
-
-.terms-tags li {
-    background: #FFFFFF !important;
-    border: 1px solid #333333 !important;
-    border-radius: 8px !important;
-}
-
-.terms-tags li a {
-    background: transparent !important;
-}
-
-body .terms-tags a,
-body .terms-tags li a,
-body ul.terms-tags li a {
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
-
-    box-shadow: none !important;
-
-    border: 1px solid #FFFFFF !important;
-}
-
-
-}
-
-/* ========================================
-   タブレット・スマホ
-   記事下の赤線を画面幅100%
-   ======================================== */
-
-@media screen and (max-width: 1000px) {
-
-    .post-entry,
-    .first-entry,
-    .main > article {
-        position: relative;
-
-        border-bottom: none !important;
-    }
-
-    .post-entry::after,
-    .first-entry::after,
-    .main > article::after {
-        content: "";
-
-        position: absolute;
-
-        left: 50%;
-        bottom: 0;
-
-        width: 100vw;
-        height: 1px;
-
-        background: #333333;
-
-        transform: translateX(-50%);
+        box-sizing: border-box !important;
     }
 }
 
 
-/* ========================================
-   タグ一覧
-   背景を白
-   ======================================== */
-.terms-tags li {
-    background: #FFFFFF !important;
-    border: 1px solid #333333 !important;
-    border-radius: 8px !important;
-}
-
-.terms-tags li a {
-    background: transparent !important;
-}
-
-body .terms-tags a,
-body .terms-tags li a,
-body ul.terms-tags li a {
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
-
-    box-shadow: none !important;
-
-    border: 1px solid #FFFFFF !important;
-}
-
-/* ========================================
-   記事・タグ・検索
-   スクロールバーを全端末で消す
-   ======================================== */
-
-#menu,
-header #menu,
-.header .nav #menu {
-    overflow: visible !important;
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    scrollbar-width: none !important;
-}
-
-/* Chrome / Safari */
-#menu::-webkit-scrollbar,
-header #menu::-webkit-scrollbar,
-.header .nav #menu::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-/* ========================================
-   タブレット帯 601px〜1000px
-   メニューのスクロールバー対策
-   ======================================== */
+/* ==================================================
+   スマホ・タブレット
+   ヘッダーを本文・フッター幅に合わせる
+   ================================================== */
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
 
-    #menu,
-    header #menu,
-    .header .nav #menu {
-        width: auto !important;
+    .header {
+        width: 94% !important;
         max-width: none !important;
 
-        overflow: visible !important;
-        overflow-x: visible !important;
-        overflow-y: visible !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
 
-        scrollbar-width: none !important;
-        white-space: nowrap !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        box-sizing: border-box !important;
     }
 
-    #menu::-webkit-scrollbar,
-    header #menu::-webkit-scrollbar,
-    .header .nav #menu::-webkit-scrollbar {
-        display: none !important;
-        width: 0 !important;
-        height: 0 !important;
+    .header .nav,
+    header .nav {
+        width: 100% !important;
     }
 }
 
-}
 
+@media screen and (max-width: 600px) {
+
+    .header {
+        width: 92% !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .header .nav,
+    header .nav {
+        width: 100% !important;
+    }
+}
