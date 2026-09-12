@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Mincho";
-    src: url("/myblog/fonts/wapuro-mincho.woff2") format("woff2");
+    src: url("/myblog/fonts/ZenOldMincho-Medium.woff") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -32,7 +32,7 @@ body {
     padding: 0;
 
     background: #EEEEEA !important;
-    color: #111111;
+    color: #333333;
 
     font-family: "Mincho";
 }
@@ -56,7 +56,7 @@ body {
 .logo,
 .logo a {
     font-family: "Zighead", sans-serif !important;
-    color: #EF2223 !important;
+    color: #333333 !important;
 
     font-weight: normal !important;
 
@@ -117,7 +117,7 @@ header .nav {
     font-size: 48px;
     line-height: 1;
 
-    color: #EF2223 !important;
+    color: #333333 !important;
     text-decoration: none !important;
 }
 
@@ -158,7 +158,7 @@ header #menu {
     box-sizing: border-box;
 
     font-family: "Mincho";
-    font-weight: bold;
+    
 }
 
 
@@ -170,7 +170,7 @@ header #menu {
     margin: 0 !important;
     padding: 0 !important;
 
-    color: #EF2223;
+    color: #333333;
     text-decoration: none;
 }
 
@@ -219,7 +219,7 @@ header #menu {
     background: transparent !important;
 
     border: none !important;
-    border-bottom: 1px solid #EF2223 !important;
+    border-bottom: 1px solid #333333 !important;
 
     border-radius: 0 !important;
 
@@ -263,7 +263,7 @@ header #menu {
 .post-entry .entry-header h2 a:hover,
 .first-entry .entry-header h1 a:hover,
 .first-entry .entry-header h2 a:hover {
-    color: #EF2223 !important;
+    color: #333333 !important;
 }
 
 
@@ -290,7 +290,7 @@ header #menu {
 .post-meta {
     margin-top: 15px !important;
 
-    color: #EF2223 !important;
+    color: #333333 !important;
 
     font-family: "Mincho";
     font-size: 13px;
@@ -347,14 +347,14 @@ header #menu {
 .post-content h2 {
     margin-top: 60px;
 
-    color: #EF2223;
+    color: #333333;
 
     font-size: 32px;
     font-weight: normal;
 }
 
 .post-content a {
-    color: #EF2223 !important;
+    color: #333333 !important;
     text-decoration: underline;
 }
 
@@ -380,7 +380,7 @@ header #menu {
     background: transparent !important;
 
     border: none !important;
-    border-bottom: 1px solid #EF2223 !important;
+    border-bottom: 1px solid #333333 !important;
 
     border-radius: 0 !important;
 }
@@ -396,7 +396,7 @@ header #menu {
     padding-top: 20px !important;
     padding-bottom: 30px !important;
 
-    color: #EF2223;
+    color: #333333;
 }
 
 
@@ -503,11 +503,10 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
 
-        color: #EF2223 !important;
+        color: #333333 !important;
 
         font-family: "Mincho";
         font-size: 20px !important;
-        font-weight: bold;
 
         line-height: 1.35;
 
@@ -549,6 +548,12 @@ header #menu {
 
         gap: 15px !important;
 
+        overflow: visible !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+        white-space: normal !important;
+
+
         z-index: 100;
     }
 
@@ -569,11 +574,10 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
 
-        color: #EF2223 !important;
+        color: #333333 !important;
 
         font-family: "Mincho";
         font-size: 20px !important;
-        font-weight: bold;
 
         line-height: 1.35;
 
@@ -620,7 +624,7 @@ header #menu {
 
         width: 1px;
 
-        background: #EF2223;
+        background: #333333;
 
         pointer-events: none;
     }
@@ -680,7 +684,7 @@ header #menu {
 
         background: #EEEEEA !important;
 
-        border-bottom: 1px solid #EF2223 !important;
+        border-bottom: 1px solid #333333 !important;
 
         box-sizing: border-box;
     }
@@ -707,8 +711,8 @@ header #menu {
     .logo {
         position: absolute !important;
 
-        left: 0 !important;
-        top: 0 !important;
+        left: 5px !important;
+        top: 5px !important;
 
         transform: none !important;
     }
@@ -761,10 +765,9 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
 
-        color: #EF2223 !important;
+        color: #333333 !important;
 
         font-size: 18px !important;
-        font-weight: bold;
 
         line-height: 1 !important;
     }
@@ -815,10 +818,9 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
 
-        color: #EF2223 !important;
+        color: #333333 !important;
 
         font-size: 18px !important;
-        font-weight: bold;
 
         line-height: 1 !important;
 
@@ -901,7 +903,7 @@ header #menu {
 
         background: #EEEEEA !important;
 
-        border-bottom: 1px solid #EF2223 !important;
+        border-bottom: 1px solid #333333 !important;
 
         box-sizing: border-box;
     }
@@ -981,10 +983,9 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
 
-        color: #EF2223 !important;
+        color: #333333 !important;
 
         font-size: 16px !important;
-        font-weight: bold;
 
         line-height: 1 !important;
     }
@@ -1034,10 +1035,10 @@ header #menu {
         margin: 0 !important;
         padding: 0 !important;
 
-        color: #EF2223 !important;
+        color: #333333 !important;
 
         font-size: 16px !important;
-        font-weight: bold;
+  
 
         line-height: 1 !important;
 
@@ -1132,14 +1133,14 @@ header #menu {
         width: 100vw;
         height: 1px;
 
-        background: #EF2223;
+        background: #333333;
 
         transform: translateX(-50%);
     }
 
 .terms-tags li {
     background: #FFFFFF !important;
-    border: 1px solid #EF2223 !important;
+    border: 1px solid #333333 !important;
     border-radius: 8px !important;
 }
 
@@ -1189,7 +1190,7 @@ body ul.terms-tags li a {
         width: 100vw;
         height: 1px;
 
-        background: #EF2223;
+        background: #333333;
 
         transform: translateX(-50%);
     }
@@ -1202,7 +1203,7 @@ body ul.terms-tags li a {
    ======================================== */
 .terms-tags li {
     background: #FFFFFF !important;
-    border: 1px solid #EF2223 !important;
+    border: 1px solid #333333 !important;
     border-radius: 8px !important;
 }
 
@@ -1221,7 +1222,58 @@ body ul.terms-tags li a {
     border: 1px solid #FFFFFF !important;
 }
 
+/* ========================================
+   記事・タグ・検索
+   スクロールバーを全端末で消す
+   ======================================== */
 
+#menu,
+header #menu,
+.header .nav #menu {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    scrollbar-width: none !important;
+}
+
+/* Chrome / Safari */
+#menu::-webkit-scrollbar,
+header #menu::-webkit-scrollbar,
+.header .nav #menu::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* ========================================
+   タブレット帯 601px〜1000px
+   メニューのスクロールバー対策
+   ======================================== */
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+
+    #menu,
+    header #menu,
+    .header .nav #menu {
+        width: auto !important;
+        max-width: none !important;
+
+        overflow: visible !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+
+        scrollbar-width: none !important;
+        white-space: nowrap !important;
+    }
+
+    #menu::-webkit-scrollbar,
+    header #menu::-webkit-scrollbar,
+    .header .nav #menu::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+}
 
 }
 
