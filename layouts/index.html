@@ -1,16 +1,26 @@
 {{ define "main" }}
 
-
 {{ range where .Site.RegularPages "Section" "blog" }}
-<article>
-  <h2>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </h2>
 
-  <p>{{ .Date.Format "2006年1月2日" }}</p>
+<article class="post-entry">
 
-  <p>{{ .Summary }}</p>
+    <header class="entry-header">
+        <h2>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+    </header>
+
+    <div class="entry-footer">
+        {{ .Date.Format "2006年1月2日" }}
+    </div>
+
+    <div class="entry-content">
+        {{ .Summary }}
+    </div>
+
+ 
 </article>
+
 {{ end }}
 
 {{ end }}

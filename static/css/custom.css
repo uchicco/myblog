@@ -34,7 +34,7 @@ body {
     width: 100%;
     max-width: 100%;
 
-    background: #EEEEEA !important;
+    background: #FDFDFD !important;
     color: #333333;
 
     font-family: "Mincho", serif;
@@ -280,7 +280,7 @@ header #menu::-webkit-scrollbar {
 .post-entry .entry-header h2 a,
 .first-entry .entry-header h1 a,
 .first-entry .entry-header h2 a {
-    color: #111111 !important;
+    color: #333333 !important;
 
     text-decoration: none;
 }
@@ -422,7 +422,7 @@ header #menu::-webkit-scrollbar {
 /* タグカード */
 
 .terms-tags li {
-    background: #EEEEEA !important;
+    background: #FDFDFD !important;
 
     border: 1px solid #333333 !important;
     border-radius: 8px !important;
@@ -437,12 +437,12 @@ header #menu::-webkit-scrollbar {
 body .terms-tags a,
 body .terms-tags li a,
 body ul.terms-tags li a {
-    background: #EEEEEA !important;
-    background-color: #EEEEEA !important;
+    background: #FDFDFD !important;
+    background-color: #FDFDFD !important;
 
     box-shadow: none !important;
 
-    border: 1px solid #EEEEEA !important;
+    border: 1px solid #FDFDFD !important;
 }
 
 
@@ -489,7 +489,7 @@ body ul.terms-tags li a {
 
         padding: 28px 32px 30px !important;
 
-        background: #EEEEEA !important;
+        background: #FDFDFD !important;
     }
 
 
@@ -774,7 +774,7 @@ body ul.terms-tags li a {
 
         padding: 10px 18px !important;
 
-        background: #EEEEEA !important;
+        background: #FDFDFD !important;
 
         border-bottom: 1px solid #333333 !important;
 
@@ -806,7 +806,7 @@ body ul.terms-tags li a {
     .logo {
         position: absolute !important;
 
-        left: 5px !important;
+        left: -2px !important;
         top: 5px !important;
 
         transform: none !important;
@@ -885,7 +885,7 @@ body ul.terms-tags li a {
         position: fixed !important;
 
         top: 72px !important;
-        right: 18px !important;
+        right:35px !important;
         left: auto !important;
 
         width: auto !important;
@@ -911,6 +911,7 @@ body ul.terms-tags li a {
         overflow-y: hidden !important;
 
         scrollbar-width: none !important;
+        font-family: "Mincho", serif;
 
         z-index: 10000;
     }
@@ -1049,7 +1050,7 @@ body ul.terms-tags li a {
 
         padding: 9px 8px !important;
 
-        background: #EEEEEA !important;
+        background: #FDFDFD !important;
 
         border-bottom: 1px solid #333333 !important;
 
@@ -1159,7 +1160,7 @@ body ul.terms-tags li a {
         position: fixed !important;
 
         top: 65px !important;
-        right: 15px !important;
+        right: 30px !important;
         left: auto !important;
 
         width: auto !important;
@@ -1184,6 +1185,7 @@ body ul.terms-tags li a {
         overflow-y: hidden !important;
 
         scrollbar-width: none !important;
+        font-family: "Mincho", serif;
 
         z-index: 10000;
     }
@@ -1336,8 +1338,12 @@ body ul.terms-tags li a {
 }
 
 
-@media screen and (max-width: 600px) {
+/* ==================================================
+   スマホ
+   ヘッダーを本文・フッター幅に合わせる
+   ================================================== */
 
+@media screen and (max-width: 600px) {
     .header {
         width: 92% !important;
         max-width: none !important;
@@ -1356,3 +1362,57 @@ body ul.terms-tags li a {
         width: 100% !important;
     }
 }
+
+
+/* ==================================================
+   個別記事：画像サイズ
+   ================================================== */
+
+.post-content img {
+    display: block !important;
+    width: 60% !important;
+    max-width: 60% !important;
+    height: auto !important;
+    margin: 30px 0 !important;
+}
+
+
+/* ==================================================
+   個別記事：H2サイズ
+   ================================================== */
+
+.post-content h2 {
+    font-size: 22px !important;
+    line-height: 1.4 !important;
+}
+
+
+/* ==================================================
+   スマホ
+   ================================================== */
+
+@media screen and (max-width: 600px) {
+    .post-content img {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .post-content h2 {
+        font-size: 20px !important;
+    }
+/* ========================================
+   スマホ・タブレット：記事画像を中央揃え
+   ======================================== */
+
+@media screen and (max-width: 1000px) {
+    .post-content img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+}
+
+
+
